@@ -5,7 +5,7 @@ from PetRegistry.models import Pet
 
 
 def index(request):
-
+    #en el [x] por ahora asignamos el objeto que necesitamos traer
     pepes = vars(Pet.objects.all()[1])
     
 
