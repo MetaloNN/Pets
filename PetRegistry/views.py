@@ -6,10 +6,13 @@ from PetRegistry.models import Pet
 
 def index(request):
     #en el [x] por ahora asignamos el objeto que necesitamos traer
-    pepes = vars(Pet.objects.all()[1])
+    #pepes = vars(Pet.objects.all()[1])
+
+    pepes = Pet.objects.all()
+    
     
 
     return render(request, 'base.html', {'pepes' : pepes})
-    #return render(request, 'base.html', print(pepes))
+   
 
 
