@@ -1,0 +1,26 @@
+<!--- {% extends 'base.html' %} -->
+{% load static %}
+{% block title %}formulario{% endblock title %}
+
+{% block content %}
+
+<div class="mb-3">
+    <form method="post" action=""> {% csrf_token %}
+        <label for="" class="form-label">Nombre:</label>
+        <input type="text"
+            class="form-control" name="nombre" id="name" aria-describedby="helpId" placeholder="Nombre de tu mascota">
+        <label for="" class="form-label">Cumpleaños:</label>
+        <input type="date"
+            class="form-control" name="birth" id="birth" aria-describedby="helpId" placeholder="Nombre de tu mascota">
+        <label for="" class="form-label">color:</label>
+        <input type="text"
+            class="form-control" name="color" id="color" aria-describedby="helpId" placeholder="Color de tu mascota">
+        <div class="d-grid gap-2">
+          <button type="submit" name="" id="" class="btn btn-primary">Ingresar</button>
+        </div>
+    </form>
+    
+</div>
+
+
+{% endblock content %}

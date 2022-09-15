@@ -19,5 +19,7 @@ from PetRegistry.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index')
+    path('', index, name='index'),
+    path('form/', formu, name='form')
+
 ]

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from PetRegistry.models import Pet
 
+
 # Create your views here.
 
 
@@ -15,4 +16,13 @@ def index(request):
     return render(request, 'base.html', {'pepes' : pepes})
    
 
+def formu(request):
 
+    if request.method == 'POST':
+        data = request.POST
+        print(data)
+        #pet = Pet(data.nombre[0], data.birth, data.color)
+        print(data.nombre)
+
+
+    return render(request, 'form.html')
